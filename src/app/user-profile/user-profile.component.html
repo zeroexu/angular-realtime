@@ -1,1 +1,5 @@
-<p>user-profile works!</p>
+<textarea
+  [(ngModel)]="userProfile.balance"
+  (keyup)="editBalance()"
+  placeholder="Start typing..."
+></textarea>

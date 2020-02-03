@@ -1,1 +1,9 @@
-<p>user-profile-list works!</p>
+<div class="sidenav">
+  <span (click)="addUserProfile()">New Document</span>
+  <span
+    [class.selected]="userProfileId === currentUserProfile"
+    (click)="loadUserProfile(userProfileId)"
+    *ngFor="let userProfileId of userProfiles | async"
+    >{{ userProfileId }}</span
+  >
+</div>
